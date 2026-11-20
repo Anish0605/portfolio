@@ -9,7 +9,7 @@
 <meta property="og:description" content="12+ years turning marketing data into revenue decisions. GA4, BigQuery, Power BI, SQL, Python, automation.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Anish Krisna S","jobTitle":"Digital & Marketing Analytics Manager","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressCountry":"IN"},"email":"mailto:anishkrisna6@gmail.com","telephone":"+918860355155","sameAs":["https://www.linkedin.com/in/anish-krisna","https://github.com/Anish0605","https://dynamoai.in"]}
+{"@context":"https://schema.org","@type":"Person","name":"Anish Krisna S","jobTitle":"Digital & Marketing Analytics Manager","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressCountry":"IN"},"email":"mailto:anishkrisna6@gmail.com","sameAs":["https://www.linkedin.com/in/anish-krisna","https://github.com/Anish0605","https://dynamoai.in"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -270,10 +270,9 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <div class="sec-label mono">Contact</div>
     <h2>Let's talk</h2>
     <p>I'm looking for a Digital or Marketing Analytics Manager role where measurement drives real decisions. Remote or hybrid, available immediately.</p>
-    <p class="mono" style="font-size:.95rem">anishkrisna6@gmail.com · +91 88603 55155</p>
     <div class="cta">
       <a class="btn primary" href="mailto:anishkrisna6@gmail.com">Email me</a>
-      <a class="btn" href="tel:+918860355155">Call +91 88603 55155</a>
+      <a class="btn" href="#contact" id="phone" data-p="KzkxODg2MDM1NTE1NQ==">Show phone number</a>
       <a class="btn" href="https://www.linkedin.com/in/anish-krisna" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/Anish0605" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
@@ -295,6 +294,15 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   var links=document.getElementById('links');
   document.getElementById('burger').addEventListener('click',function(){links.classList.toggle('open')});
   links.addEventListener('click',function(e){if(e.target.tagName==='A')links.classList.remove('open')});
+  var ph=document.getElementById('phone');
+  ph.addEventListener('click',function(e){
+    if(ph.dataset.done)return;
+    e.preventDefault();
+    var n=atob(ph.dataset.p);
+    ph.href='tel:'+n;
+    ph.textContent='Call +91 88603 55155';
+    ph.dataset.done='1';
+  });
   document.getElementById('yr').textContent=new Date().getFullYear();
   var els=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
